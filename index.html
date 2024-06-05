@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Bookmarker</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="content ">
+<div class="container p-4">
+    <h1 class="text-center py-5  fw-bold">Bookmarker</h1>
+
+    <div class="d-flex justify-content-center align-items-center test my-4 " >
+        <i class="fa-solid fa-bookmark mx-2"></i>
+        <h2 class="fw-bold"> Bookmark your favorite sites </h2>
+        <i class="fa-solid fa-bookmark mx-2"></i>
+    </div>
+
+    <div class="site-name w-100 d-flex flex-column justify-content-center">
+        <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name</label>
+            <input oninput="valaditionName()" type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName">
+            <p class="alert alert-danger d-none" id="msgName">Site name must contain at least 3 characters</p>
+
+
+    </div>
+    <div class="site-url w-100 d-flex flex-column justify-content-center my-3">
+        <label for="bookmarkURL" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+        <input oninput="valaditionUrl()" type="url" placeholder="Website URL" class="form-control" id="bookmarkURL">
+        <p class="alert alert-danger d-none" id="msgUrl">Site URL must be a valid one</p>
+
+      </div>
+
+      <div class="text-center butt ">
+        <button onclick="addProduct()" class="btn btn-submit px-5 text-center my-4 " id="submitBtn">Submit</button>
+        
+        </div>
+        
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+              <tr><th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr></thead>
+            <tbody id="tableContent">
+              
+            </tbody>
+          </table>
+
+</div>
+
+  
+  </div>
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
